@@ -55,8 +55,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Boot
 PRODUCT_PROPERTY_OVERRIDES += \
-    sys.vendor.shutdown.waittime=500 \
-    ro.build.shutdown_timeout=0
+     sys.vendor.shutdown.waittime=500 \
+     ro.build.shutdown_timeout=0
 
 # Audio offload
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -150,6 +150,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
       persist.hwc.mdpcomp.enable=true \
+      debug.cpurend.vsync=false \
       debug.composition.type=c2d \
       debug.mdpcomp.logs=0 \
       debug.sf.hw=1 \
