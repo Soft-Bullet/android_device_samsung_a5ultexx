@@ -267,6 +267,7 @@ PRODUCT_PACKAGES += \
 # Radio
 PRODUCT_PACKAGES += \
     libsec-ril_shim \
+    libsecnativefeature \
     libxml2 \
     libcnefeatureconfig \
     librmnetctl
