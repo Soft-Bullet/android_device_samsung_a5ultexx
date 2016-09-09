@@ -259,7 +259,6 @@ lib/libsec-ril.so
 lib/libsecril-client.so
 lib/libcordon.so
 lib/libfactoryutil.so
-lib/libsecnativefeature.so
 lib/libomission_avoidance.so
 lib/librmnetctl.so
 etc/plmn_se13.bin
