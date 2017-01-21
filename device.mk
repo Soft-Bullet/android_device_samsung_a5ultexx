@@ -29,6 +29,10 @@ PRODUCT_ENFORCE_RRO_TARGETS := framework-res
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
+# AdvancedDisplay
+PRODUCT_PACKAGES += \
+    AdvancedDisplay
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
