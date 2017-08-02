@@ -675,6 +675,7 @@ service rmt_storage /system/bin/rmt_storage
     class core
     user root
     group system wakelock
+    shutdown critical
     disabled
     shutdown critical
     writepid /dev/cpuset/system-background/tasks
