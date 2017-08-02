@@ -61,6 +61,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
       ro.core_ctl_max_cpu=4 \
       ro.min_freq_0=800000
 
+# Boot
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.vendor.shutdown.waittime=500 \
+    ro.build.shutdown_timeout=0
+
 # Audio offload
 PRODUCT_PROPERTY_OVERRIDES += \
       audio.offload.disable=1
