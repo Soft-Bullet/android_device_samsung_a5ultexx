@@ -161,7 +161,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Misc.
 PRODUCT_PROPERTY_OVERRIDES += \
-     dalvik.vm.dex2oat-flags=--no-watch-dog
+     dalvik.vm.dex2oat-flags=--no-watch-dog \
+     ro.sys.fw.dex2oat_thread_count=4
 
 # Treble Misc.
 PRODUCT_PROPERTY_OVERRIDES += \
