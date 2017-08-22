@@ -26,9 +26,6 @@
 #
 
 import /vendor/etc/init/hw/init.qcom.usb.rc
-#import /vendor/etc/init/hw/init.target.rc
-#import /vendor/etc/init/hw/init.carrier.rc
-
 on init
 
 on early-init
@@ -559,7 +556,7 @@ on post-fs-data
     chown radio radio /data/misc/radio/db_check_done
     chmod 0660 /data/misc/radio/db_check_done
 
-#start camera server as daemon
+# start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class main
     user camera
@@ -569,6 +566,7 @@ service qseecomd /system/bin/qseecomd
    class core
    user root
    group root
+   disabled
 
 service perfd /vendor/bin/perfd
    class main
