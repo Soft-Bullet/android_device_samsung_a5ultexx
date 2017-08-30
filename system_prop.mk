@@ -68,7 +68,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Audio offload
 PRODUCT_PROPERTY_OVERRIDES += \
-      audio.offload.disable=1
+      vendor.audio.tunnel.encode=false \
+      qcom.hw.aac.encoder=false \
+      vendor.audio.offload.buffer.size.kb=32 \
+      vendor.audio.offload.gapless.enabled=true \
+      audio.offload.min.duration.secs=30
 
 # Fluence
 PRODUCT_PROPERTY_OVERRIDES += \
