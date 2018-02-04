@@ -154,7 +154,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 # Legacy BLOB Support
 TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /system/bin/mediaserver=22 \
-    /system/bin/mm-qcamera-daemon=22 \
+    /system/vendor/bin/mm-qcamera-daemon=22 \
     /system/vendor/bin/hw/rild=27
 
 # Power
@@ -189,8 +189,8 @@ VENDOR_SECURITY_PATCH := 2017-08-01
 # Shims
 TARGET_LD_SHIM_LIBS := \
     /system/lib/libcrypto.so|libboringssl-compat.so \
-    /system/lib/libsec-ril.so|libsec-ril_shim.so \
-    /system/lib/libsec-ril-dsds.so|libsec-ril_shim.so \
+    /system/vendor/lib/libsec-ril.so|libsec-ril_shim.so \
+    /system/vendor/lib/libsec-ril-dsds.so|libsec-ril_shim.so \
     /system/vendor/lib/libizat_core.so|libizat_core_shim.so
 
 # Touchscreen
