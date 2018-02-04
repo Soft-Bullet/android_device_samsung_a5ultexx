@@ -161,8 +161,8 @@ BOARD_ROOT_EXTRA_SYMLINKS := /data/tombstones:/tombstones
 
 # Legacy BLOB Support
 TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
-    /system/bin/mediaserver=23 \
-    /system/bin/mm-qcamera-daemon=23 \
+    /system/bin/mediaserver=22 \
+    /system/vendor/bin/mm-qcamera-daemon=22 \
     /system/vendor/bin/hw/rild=27
 
 # Power
@@ -193,11 +193,8 @@ VENDOR_SECURITY_PATCH := 2017-08-01
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
-    /system/lib/libmmjpeg_interface.so|libboringssl-compat.so \
-    /system/lib/libsec-ril.so|libsec-ril_shim.so \
-    /system/lib/libsec-ril-dsds.so|libsec-ril_shim.so \
-    /system/vendor/lib/libizat_core.so|libizat_core_shim.so \
-    /system/vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so
+    /system/lib/libcrypto.so|libboringssl-compat.so \
+    /system/vendor/lib/libizat_core.so|libizat_core_shim.so
 
 # Touchscreen
 TARGET_TAP_TO_WAKE_NODE := "/sys/class/sec/sec_touchscreen/wake_gesture"

@@ -45,7 +45,7 @@ on fs
     setprop persist.adb.nonblocking_ffs 0
     setprop ro.adb.nonblocking_ffs 0
 
-service qcom-usb-sh /system/bin/sh /vendor/etc/init/hw/init.qcom.usb.sh
+service qcom-usb-sh /system/bin/bin/init.qcom.usb.sh
     class main
     user root
     oneshot
