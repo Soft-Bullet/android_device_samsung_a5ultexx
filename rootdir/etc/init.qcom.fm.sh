@@ -1,4 +1,4 @@
-#!/system/bin/sh
+#!/vendor/bin/sh
 # Copyright (c) 2009-2011, 2015, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -36,12 +36,12 @@ LOG_NAME="${0}:"
 
 loge ()
 {
-  /system/bin/log -t $LOG_TAG -p e "$LOG_NAME $@"
+  /vendor/bin/log -t $LOG_TAG -p e "$LOG_NAME $@"
 }
 
 logi ()
 {
-  /system/bin/log -t $LOG_TAG -p i "$LOG_NAME $@"
+  /vendor/bin/log -t $LOG_TAG -p i "$LOG_NAME $@"
 }
 
 failed ()
@@ -60,17 +60,17 @@ case $mode in
   "normal")
         logi "inserting the radio transport module"
         echo 1 > /sys/module/radio_iris_transport/parameters/fmsmd_set
-        /system/bin/fm_qsoc_patches $version 0
+        /system/vendor/bin/fm_qsoc_patches $version 0
      ;;
   "wa_enable")
-   /system/bin/fm_qsoc_patches $version 1
+   /system/vendor/bin/fm_qsoc_patches $version 1
      ;;
   "wa_disable")
-   /system/bin/fm_qsoc_patches $version 2
+   /system/vendor/bin/fm_qsoc_patches $version 2
      ;;
    *)
     logi "Shell: Default case"
-    /system/bin/fm_qsoc_patches $version 0
+    /system/vendor/bin/fm_qsoc_patches $version 0
     ;;
 esac
 
