@@ -15,3 +15,8 @@
 
 PRODUCT_MAKEFILES := \
         $(LOCAL_DIR)/lineage_a5ultexx.mk
+
+COMMON_LUNCH_CHOICES := \
+    lineage_a5ultexx--user \
+    lineage_a5ultexx-userdebug \
+    lineage_a5ultexx-eng
