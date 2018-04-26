@@ -210,6 +210,10 @@ PRODUCT_PACKAGES += \
     libkeyutils \
     tcpdump
 
+# Native libraries
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+
 # NFC
 PRODUCT_COPY_FILES += \
 	$(DEVICE_PATH)/configs/nfc/nfcee_access.xml:$(TARGET_COPY_OUT_VENDOR)/etc/nfcee_access.xml \
