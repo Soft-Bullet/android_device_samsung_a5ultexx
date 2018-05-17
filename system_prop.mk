@@ -138,7 +138,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
       persist.hwc.mdpcomp.enable=true \
       debug.composition.type=c2d \
       debug.mdpcomp.logs=0 \
-     debug.sf.hw=1 \
+      debug.sf.hw=1 \
 
 # Time
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -153,6 +153,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
      persist.media.treble_omx=false \
      camera.disable_treble=true
 
+# SafetyNetM
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.clientidbase.am=android-samsung \
+    ro.com.google.clientidbase.gmm=android-samsung \
+    ro.com.google.clientidbase.ms=android-samsung \
+    ro.com.google.clientidbase.yt=android-samsung
+
 # ZRAM
 PRODUCT_PROPERTY_OVERRIDES += \
      ro.config.zram=true
@@ -165,3 +172,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
      persist.debug.wfd.enable=1 \
      persist.sys.wfd.virtual=0
+
