@@ -165,7 +165,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Treble Misc.
 PRODUCT_PROPERTY_OVERRIDES += \
-     persist.media.treble_omx=false \
      camera.disable_treble=true
 
 # SafetyNetM
