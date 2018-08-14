@@ -113,6 +113,7 @@ BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 BOARD_DTBTOOL_ARGS := -2
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=23 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci androidboot.selinux=enforcing
+BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_RAMDISK_OFFSET := 0x02000000
