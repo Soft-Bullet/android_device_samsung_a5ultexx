@@ -391,6 +391,3 @@ PRODUCT_COPY_FILES += \
 
 # Inherit from vendor
 $(call inherit-product-if-exists, vendor/samsung/a5ultexx/a5ultexx-vendor.mk)
-
-# Inhert dalvik heap values from aosp
-$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)

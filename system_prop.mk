@@ -21,7 +21,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
      ro.use_data_netmgrd=false \
      persist.data.netmgrd.qos.enable=false
-      
+
+# Dalvik
+PRODUCT_PROPERTY_OVERRIDES += \
+     dalvik.vm.heapstartsize=8m \
+     dalvik.vm.heapgrowthlimit=192m \
+     dalvik.vm.heapsize=512m \
+     dalvik.vm.heaptargetutilization=0.75 \
+     dalvik.vm.heapminfree=512k \
+     dalvik.vm.heapmaxfree=8m
+
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
       ro.sf.lcd_density=320 \
