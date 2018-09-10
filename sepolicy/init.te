@@ -1,94 +1,26 @@
-selinux_check_context(init)
-
-allow init {
-    sysfs_sec_tsp
-    sysfs_sensors
-}:lnk_file read;
-
-allow init {
-    sysfs_audio
-    sysfs_batteryinfo
-    sysfs_bluetooth_writable
-    sysfs_camera
-    sysfs_graphics
-    sysfs_input
-    sysfs_kgsl
-    sysfs_leds
-    sysfs_mdnie
-    sysfs_msmuart_file
-    sysfs_sec_bamdmux
-    sysfs_sec_key
-    sysfs_sec_switch
-    sysfs_sec_touchkey
-    sysfs_sec_tsp
-    sysfs_sensors
-    sysfs_socinfo
-    sysfs_usb_otg
-    sysfs_vibeamp
-}:file setattr;
-
-allow init {
-    sysfs_cpu_boost
-    sysfs_devices_system_cpu
-    sysfs_lowmemorykiller
-    sysfs_mmc_host
-    sysfs_msm_perf
-    sysfs_msm_power
-    sysfs_sec_key
-    sysfs_thermal
-}:file w_file_perms;
-
-allow init clatd_exec:file getattr;
-allow init dex2oat_exec:file getattr;
-allow init dnsmasq_exec:file getattr;
-allow init hostapd_exec:file getattr;
-allow init idmap_exec:file getattr;
-allow init ppp_exec:file getattr;
-allow init profman_exec:file getattr;
-allow init runas_exec:file getattr;
-allow init sgdisk_exec:file getattr;
+allow init { domain -lmkd -crash_dump }:process noatsecure;
 allow init debugfs:file write;
-allow init sdcardd_exec:file getattr;
-allow init video_device:chr_file { read open write ioctl };
-allow init init:capability2 block_suspend;
+allow init sysfs:lnk_file setattr;
+allow init exfat:dir search;
 allow init shell_exec:file execute_no_trans;
-allow init init:socket { read write };
-allow init rtc_device:chr_file ioctl;
-allow init time_data_file:file append;
-allow init proc_kernel_sched:file write;
+allow init sysfs:file { open write setattr };
+allow init sysfs_graphics:file setattr;
+allow init sysfs_vibeamp:file setattr;
 allow init system_file:file execute_no_trans;
-allow init sysfs:file { setattr read open };
-allow init smd_device:chr_file ioctl;
-allow init smd_device:chr_file { read open write };
-allow init ion_device:chr_file { read ioctl };
-allow init sysfs_socinfo:file write;
-allow init hci_attach_dev:chr_file write;
+allow init self:socket { create ioctl };
+allow init smd_device:chr_file { write ioctl };
+allow init proc:file { write open };
+allow init sysfs_devices_system_cpu:file write;
+allow init sysfs_msm_power:file write;
 allow init qmuxd_socket:sock_file write;
-allow init rpmb_device:blk_file write;
-allow init ssd_device:blk_file write;
-allow init smem_log_device:chr_file { ioctl write };
-allow init sysfs_wake_lock:file { append open };
-allow init sysfs_process_reclaim:file { open write };
-allow init sysfs_uio:lnk_file read;
-allow init sysfs_uio_file:file { read open };
-allow init uio_device:chr_file write;
-allow init vendor_file:file execute_no_trans;
-allow init hwservicemanager:binder call;
-allow init hwservicemanager:binder transfer;
-allow init nfc_device:chr_file { write ioctl };
-allow init default_android_hwservice:hwservice_manager find;
-allow init default_android_hwservice:hwservice_manager add;
-allow init hal_nfc_hwservice:hwservice_manager find;
-allow init hal_nfc_hwservice:hwservice_manager add;
-allow init hidl_base_hwservice:hwservice_manager add;
-allow init mediaserver:fd use;
-allow init modem_efs_partition_device:blk_file write;
-allow init debugfs_rmt:file write;
-allow init init:socket create;
-allow init init:socket ioctl;
-allow init init:socket bind;
-allow init tee_device:chr_file write;
-allow init tee_device:chr_file ioctl;
-allow init sysfs_camera:file { read write open };
-allow init hal_graphics_allocator_default:fd use;
-allow init alarm_device:chr_file write;
+allow init qmuxd:unix_stream_socket connectto;
+allow init sysfs_msm_power:file open;
+allow init sysfs_lowmemorykiller:file { write open };
+allow init sysfs_process_reclaim:file { write open };
+allow init sysfs_thermal:file write;
+allow init sysfs_socinfo:file write;
+allow init system_data_file:chr_file getattr;
+allow init sysfs_net:file write;
+allow init fm_radio_device:chr_file ioctl;
+allow init sysfs_fm:file write;
+

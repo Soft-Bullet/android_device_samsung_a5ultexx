@@ -1,3 +1,0 @@
-allow logpersist cache_file:dir { read open write };
-allow logpersist cache_file:dir add_name;
-allow logpersist logpersist:capability dac_override;

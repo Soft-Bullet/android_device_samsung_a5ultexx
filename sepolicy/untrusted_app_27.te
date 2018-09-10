@@ -1,6 +1,0 @@
-allow untrusted_app_27 proc_vmstat:file { open getattr };
-allow untrusted_app_27 rootfs:dir { read open };
-allow untrusted_app_27 mnt_media_rw_file:dir getattr;
-allow untrusted_app_27 mnt_product_file:dir getattr;
-allow untrusted_app_27 mnt_vendor_file:dir getattr;
-allow untrusted_app_27 tombstone_data_file:dir search;
