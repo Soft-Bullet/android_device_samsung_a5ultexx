@@ -1,19 +1,5 @@
-# To improve app launch times - we would like to force all tasks to
-# run on big cores for app launch (sched_boost) - instead of just
-# boosting them to make it "more likely" to run on big cores.
-allow system_server domain:process setsched;
-allow system_server efs_file:dir search; 
-allow system_server efs_file:file { read open }; 
-allow system_server sysfs_input:file write;
-allow system_server sysfs_vibeamp:dir search;
-allow system_server sysfs_vibeamp:file rw_file_perms;
-allow system_server dalvikcache_data_file:file execute;
-allow system_server sysfs_sec_tsp:file write;
-allow system_server sysfs_mdnie:file write;
-allow system_server vendor_file:file execmod;
-allow system_server default_android_hwservice:hwservice_manager find;
-allow system_server default_android_service:service_manager find;
-allow system_server default_android_service:service_manager add;
-allow system_server mpctl_data_file:dir search;
-allow system_server mpctl_data_file:sock_file write;
-r_dir_file(system_server, persist_file) 
+allow system_server sensors_device:chr_file rw_file_perms;
+allow system_server efs_file:dir search;
+allow system_server sysfs_vibeamp:file write;
+r_dir_file(system_server, persist_file)
+
