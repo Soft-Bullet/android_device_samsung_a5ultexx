@@ -135,6 +135,10 @@ PRODUCT_PACKAGES += \
     ethertypes \
     libebtc
 
+# For config.fs
+PRODUCT_PACKAGES += \
+    fs_config_files
+
 # FM
 PRODUCT_PACKAGES += \
     FMRadio \
