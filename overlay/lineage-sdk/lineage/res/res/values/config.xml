@@ -29,7 +29,7 @@
          This MUST NOT be set to true on devices produced in 2016 or later -->
     <bool name="config_trustLegacyEncryption">true</bool>
 
-<!-- Hardware keys present on the device, stored as a bit field.
+     <!-- Hardware keys present on the device, stored as a bit field.
          This integer should equal the sum of the corresponding value for each
          of the following keys present:
              1 - Home
@@ -71,4 +71,11 @@
         <item>org.lineageos.settings.device.KeyHandler</item>
         <item>org.lineageos.lineageparts.gestures.KeyHandler</item>
     </string-array>
+    
+    <!-- Defines the actions shown in advanced reboot submenu -->
+    <string-array name="config_restartActionsList">
+        <item>restart</item>
+        <item>restart_recovery</item>
+        <item>restart_download</item>
+     </string-array>
 </resources>
