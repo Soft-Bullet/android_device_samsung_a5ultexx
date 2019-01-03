@@ -41,7 +41,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-service \
     android.hardware.audio.effect@5.0-impl \
     android.hardware.audio.effect@2.0-service \
-    android.hardware.broadcastradio@1.0-impl \
     audio.a2dp.default \
     audio_amplifier.msm8916 \
     audio.primary.msm8916 \
