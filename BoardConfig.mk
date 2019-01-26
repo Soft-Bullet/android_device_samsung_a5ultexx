@@ -167,6 +167,9 @@ TARGET_POWERHAL_SET_INTERACTIVE_EXT := $(DEVICE_PATH)/power/power_ext.c
 # Qcom
 BOARD_USES_QCOM_HARDWARE := true
 
+# Radio
+TARGET_USES_OLD_MNC_FORMAT := true
+
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
