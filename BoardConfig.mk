@@ -165,7 +165,7 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /system/vendor/bin/hw/rild=27
 
 # Power
-TARGET_USES_INTERACTION_BOOST := true
+TARGET_POWERHAL_SET_INTERACTIVE_EXT := $(DEVICE_PATH)/power/power_ext.c
 
 # Qcom
 BOARD_USES_QCOM_HARDWARE := true
