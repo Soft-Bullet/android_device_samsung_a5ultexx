@@ -196,6 +196,9 @@ TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib/libizat_core.so|libizat_core_shim.so \
     /system/vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so
 
+# Touchscreen
+TARGET_TAP_TO_WAKE_NODE := "/sys/class/sec/sec_touchscreen/wake_gesture"
+
 # Vold
 BOARD_VOLD_DISC_HAS_MULTIPLE_MAJORS := true
 BOARD_VOLD_MAX_PARTITIONS := 65
