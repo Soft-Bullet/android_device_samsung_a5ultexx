@@ -118,8 +118,7 @@ PRODUCT_PACKAGES += \
     libgenlock \
     libtinyxml \
     memtrack.msm8916 \
-    copybit.msm8916 \
-    libjni_livedisplay
+    copybit.msm8916
 
 # Dex optimization
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
