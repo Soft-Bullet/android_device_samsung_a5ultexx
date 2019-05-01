@@ -779,9 +779,9 @@ service ssr_diag /system/bin/ssr_diag
     group system
     disabled
 
-service charger /charger
+service charger /system/bin/charger
     class charger
-    group log
+    group system graphics
     seclabel u:r:charger:s0
 
 on class_start:late_start
