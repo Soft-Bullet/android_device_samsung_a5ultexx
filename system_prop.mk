@@ -183,6 +183,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
      debug.camcorder.disablemeta=true
 
+# Connectivity Engine
+PRODUCT_PROPERTY_OVERRIDES += \
+     persist.cne.dpm=0 \
+     persist.cne.feature=0 \
+     persist.dpm.feature=0
+
 # WiDi
 PRODUCT_PROPERTY_OVERRIDES += \
      persist.debug.wfd.enable=1 \

@@ -191,8 +191,6 @@ VENDOR_SECURITY_PATCH := 2017-08-01
 # Shims
 TARGET_LD_SHIM_LIBS := \
     /system/lib/libcrypto.so|libboringssl-compat.so \
-    /system/vendor/lib/libsec-ril.so|libsec-ril_shim.so \
-    /system/vendor/lib/libsec-ril-dsds.so|libsec-ril_shim.so \
     /system/vendor/lib/libizat_core.so|libizat_core_shim.so
 
 # Touchscreen
