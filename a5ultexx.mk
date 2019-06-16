@@ -356,7 +356,7 @@ PRODUCT_PACKAGES += \
 
 # USB HAL
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service.basic
+    android.hardware.usb@1.0-service.a5-common
 
 # Vibrator
 PRODUCT_PACKAGES += \
