@@ -360,8 +360,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl \
-    android.hardware.vibrator@1.0-service
+    android.hardware.vibrator@1.0-service.a5-common
 
 # Vendor HIDI Support
 PRODUCT_PACKAGES += \

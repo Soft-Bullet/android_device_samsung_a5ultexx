@@ -33,6 +33,7 @@ sys/bus/platform/drivers/sec-battery/battery.85/power_supply/battery(/.*)?			u:o
 /(vendor|system/vendor)/bin/hw/android\.hardware\.sensors@1\.0-service\.a5-common      u:object_r:hal_sensors_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.usb@1\.0-service\.a5-common          u:object_r:hal_usb_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.samsung-qcom		u:object_r:hal_lineage_livedisplay_sysfs_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator@1\.0-service\.a5-common     u:object_r:hal_vibrator_default_exec:s0
 
 # Workaround for input
 /sys/devices/soc.0/i2c.78/i2c-11/11-0020/input/input1/enabled					u:object_r:sysfs_input:s0
