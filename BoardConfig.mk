@@ -163,7 +163,8 @@ BOARD_ROOT_EXTRA_SYMLINKS := /data/tombstones:/tombstones
 TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /system/bin/mediaserver=22 \
     /system/vendor/bin/mm-qcamera-daemon=22 \
-    /system/vendor/bin/hw/rild=27
+    /system/vendor/bin/hw/rild=27 \
+    /system/vendor/bin/hw/android.hardware.sensors@1.0-service.a5-common=22
 
 # Power
 TARGET_POWERHAL_SET_INTERACTIVE_EXT := $(DEVICE_PATH)/power/power_ext.c
