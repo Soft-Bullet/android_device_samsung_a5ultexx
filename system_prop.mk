@@ -22,7 +22,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
      ro.use_data_netmgrd=false \
      persist.data.netmgrd.qos.enable=false
-      
+
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
       ro.sf.lcd_density=320 \
@@ -40,6 +40,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+
+# Enable EGL image tracking on SF for b/137514000
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.enable_egl_image_tracker=1
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
