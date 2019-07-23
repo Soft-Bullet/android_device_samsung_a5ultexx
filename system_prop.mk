@@ -45,6 +45,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.enable_egl_image_tracker=1
 
+# Bug: 68943050
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.latch_unsignaled=1
+
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
       ro.config.max_starting_bg=8 \
