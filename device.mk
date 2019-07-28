@@ -96,6 +96,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.legacyencoder=true \
     media.stagefright.less-secure=true
 
+# Dirac
+PRODUCT_PACKAGES += \
+    Dirac
+
 # Display
 PRODUCT_PACKAGES += \
     gralloc.msm8916 \
