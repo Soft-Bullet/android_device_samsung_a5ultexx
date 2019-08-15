@@ -53,9 +53,6 @@
          autodetected from the Configuration. -->
    <bool name="config_showNavigationBar">false</bool>
 
-    <!-- Enables or disables fading edges when marquee is enabled in TextView. -->
-    <bool name="config_ui_enableFadingMarquee">false</bool>
-
     <!-- XXXXX NOTE THE FOLLOWING RESOURCES USE THE WRONG NAMING CONVENTION.
          Please don't copy them, copy anything else. -->
     <!-- When true, the tethering upstream network follows the current default
@@ -470,6 +467,7 @@
     <integer name="config_screenBrightnessDoze">22</integer>
     <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
     <bool name="config_dozeAfterScreenOffByDefault">true</bool>
+
     <!-- BurnIn. -->
     <bool name="config_enableBurnInProtection">true</bool>
 
@@ -518,4 +516,9 @@
          manager will disable alpha trasformation in animations where not
          strictly needed. -->
     <bool name="config_sf_limitedAlpha">true</bool>
+
+    <!-- Enables or disables fading edges when marquee is enabled in TextView.
+         Off by default, since the framebuffer readback used to implement the
+         fading edges is prohibitively expensive on most GPUs. -->
+    <bool name="config_ui_enableFadingMarquee">true</bool>
 </resources>
