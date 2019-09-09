@@ -324,6 +324,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+# Shipping API level (for CTS backward compatibility)
+PRODUCT_SHIPPING_API_LEVEL := 19
+
 # System Properties
 $(call inherit-product, device/samsung/a5ultexx/system_prop.mk)
 
