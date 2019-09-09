@@ -168,9 +168,6 @@ TARGET_HAS_NO_POWER_STATS := true
 TARGET_HAS_NO_WLAN_STATS := true
 TARGET_USES_INTERACTION_BOOST := true
 
-# Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-
 # Qcom
 BOARD_USES_QCOM_HARDWARE := true
 
@@ -184,9 +181,6 @@ BOARD_PROVIDES_LIBRIL := true
 # SELinux
 include device/qcom/sepolicy-legacy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
-
-# Shipping API level (for CTS backward compatibility)
-PRODUCT_SHIPPING_API_LEVEL := 19
 
 # Manifest
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
