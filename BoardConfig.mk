@@ -105,7 +105,7 @@ BOARD_HAVE_QCOM_FM := true
 TARGET_NO_RPC := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_a5lte
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_a5lte
 
 # Kernel
 BOARD_CUSTOM_BOOTIMG := true
