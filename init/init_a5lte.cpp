@@ -35,7 +35,6 @@
 
 #include "vendor_init.h"
 #include "property_service.h"
-#include "log.h"
 
 using android::base::GetProperty;
 using android::init::property_set;
@@ -70,9 +69,6 @@ void vendor_load_properties()
     property_set("ro.boot.btmacaddr", "00:00:00:00:00:00");
 
     std::string platform = GetProperty("ro.board.platform","");
-    if (platform != ANDROID_TARGET)
-        return;
-
     std::string bootloader = GetProperty("ro.bootloader","");
 
     if (bootloader.find("A500FU") == 0) {
