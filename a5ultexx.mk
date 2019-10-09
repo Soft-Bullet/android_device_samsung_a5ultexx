@@ -136,6 +136,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.2-service.clearkey \
     android.hardware.drm@1.1-service.widevine
 
+# Encryption
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
+
 # For config.fs
 PRODUCT_PACKAGES += \
     fs_config_files
