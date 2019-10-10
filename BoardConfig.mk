@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017-2018 The LineageOS Project
+# Copyright (C) 2020  The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -106,6 +106,7 @@ TARGET_NO_RPC := true
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_a5lte
+TARGET_RECOVERY_DEVICE_MODULES := libinit_a5lte
 
 # Kernel
 BOARD_CUSTOM_BOOTIMG := true
