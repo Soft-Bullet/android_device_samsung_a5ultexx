@@ -357,9 +357,6 @@
          and one pSIM) -->
     <integer name="config_num_physical_slots">2</integer>
     
-    <!-- Whether the device has outdated qti-telephony-common.jar -->
-    <bool name="config_oldQtiTelephony">true</bool>
-
     <!-- Whether to enable Qualcomm Boost Framework -->
     <bool name="config_enableQcCpuBoost">true</bool>
 
