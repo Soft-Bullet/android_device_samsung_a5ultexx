@@ -133,6 +133,9 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.2-service.clearkey \
     android.hardware.drm@1.1-service.widevine
 
+# Exclude AudioFX
+TARGET_EXCLUDES_AUDIOFX := true
+
 # FM
 PRODUCT_PACKAGES += \
     FMRadio \
