@@ -159,6 +159,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
       debug.sf.hw=1 \
       debug.egl.hw=1
 
+# LMKD
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lmk.critical_upgrade=true \
+    ro.lmk.downgrade_pressure=60 \
+    ro.lmk.kill_heaviest_task=false \
+    ro.lmk.log_stats=true \
+    ro.lmk.upgrade_pressure=40 \
+    ro.lmk.use_psi=false
+
 # Time
 PRODUCT_PROPERTY_OVERRIDES += \
      persist.timed.enable=true
