@@ -173,7 +173,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
      persist.debug.wfd.enable=1 \
      persist.sys.wfd.virtual=0
-
-# Vendor security patch
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.build.security_patch=2017-08-01
