@@ -1,7 +1,4 @@
 LOCAL_PATH:= $(call my-dir)
-#Fix InputDisabler to support all the devices to reduce duplication.
-ifeq ($(BOARD_VENDOR),samsung)
-ifeq ($(TARGET_BOARD_PLATFORM),msm8916)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional
@@ -14,8 +11,6 @@ LOCAL_CERTIFICATE := platform
 
 LOCAL_PRIVILEGED_MODULE := true
 
-LOCAL_SDK_VERSION := 27
+LOCAL_PRIVATE_PLATFORM_APIS := true
 
 include $(BUILD_PACKAGE)
-endif
-endif
