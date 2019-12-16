@@ -1,74 +1,87 @@
 package org.davis.inputdisabler.utils;
 
+/*
+ * Created by Dāvis Mālnieks on 2/22/16.
+ */
+
 import android.util.Log;
+
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 
 public final class Device {
-    public static void enableDevices(boolean z, boolean z2, boolean z3) {
-        if (z3) {
-            if (!z || read_sysfs("/sys/class/sec/sec_touchkey/force_disable") <= 0) {
+
+    public static final String TAG = "InputDisablerDevice";
+
+    /*
+     * Enables or disables input devices by writing to sysfs path
+     */
+    public static void enableDevices(boolean enable, boolean touch, boolean keys) {
+        // Turn on keys input
+        if(keys) {
+            if(!(enable && read_sysfs(Constants.TK_FORCE_DISABLE) > 0)) {
                 try {
-                    write_sysfs("/sys/class/input/input1/enabled", z);
+                    write_sysfs(Constants.TK_PATH, enable);
                 } catch (Exception e) {
-                    String str = "InputDisablerDevice";
-                    StringBuilder sb = new StringBuilder();
-                    sb.append("Failed to ");
-                    sb.append(z ? "enable" : "disable");
-                    sb.append(" keys");
-                    Log.e(str, sb.toString());
+                    Log.e(TAG, "Failed to " + (enable ? "enable" : "disable") + " keys");
                 }
             } else {
-                Log.d("InputDisablerDevice", "Keys are force disabled, not turning on");
+                Log.d(TAG, "Keys are force disabled, not turning on");
             }
         }
-        if (z2) {
+
+        // Turn on touch input
+        if(touch) {
             try {
-                write_sysfs("/sys/class/input/input2/enabled", z);
-            } catch (Exception e2) {
-                String str2 = "InputDisablerDevice";
-                StringBuilder sb2 = new StringBuilder();
-                sb2.append("Failed to ");
-                sb2.append(z ? "enable" : "disable");
-                sb2.append(" touchscreen");
-                Log.e(str2, sb2.toString());
+                write_sysfs(Constants.TS_PATH, enable);
+            } catch (Exception e) {
+                Log.e(TAG, "Failed to " + (enable ? "enable" : "disable") + " touchscreen");
             }
         }
     }
 
-    public static void enableDevices(boolean z) {
-        enableDevices(z, true, true);
+    /*
+     * Wrapper methods
+     */
+    public static void enableDevices(boolean enable) {
+        enableDevices(enable, true, true);
     }
 
-    public static void enableTouch(boolean z) {
-        enableDevices(z, true, false);
+    public static void enableTouch(boolean enable) {
+        enableDevices(enable, true, false);
     }
 
-    public static void enableKeys(boolean z) {
-        enableDevices(z, false, true);
+    public static void enableKeys(boolean enable) {
+        enableDevices(enable, false, true);
     }
 
-    private static boolean write_sysfs(String str, boolean z) throws Exception {
-        FileOutputStream fileOutputStream = new FileOutputStream(str);
-        byte[] bArr = new byte[2];
-        bArr[0] = (byte) (z ? 49 : 48);
-        bArr[1] = 10;
-        fileOutputStream.write(bArr);
-        fileOutputStream.close();
+    // Writes to sysfs node, returns true if success, false if fail
+    private static boolean write_sysfs(String path, boolean on) throws Exception {
+        FileOutputStream fos = new FileOutputStream(path);
+        byte[] bytes = new byte[2];
+        bytes[0] = (byte)(on ? '1' : '0');
+        bytes[1] = '\n';
+        fos.write(bytes);
+        fos.close();
+
         return true;
     }
 
-    public static int read_sysfs(String str) {
+    // Reads integer value from sysfs, returns value if success, -1 if fail
+    public static int read_sysfs(String path) {
+        String value;
         try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(str));
-            String readLine = bufferedReader.readLine();
-            bufferedReader.close();
-            return Integer.parseInt(readLine);
-        } catch (IOException e) {
-            e.printStackTrace();
+            BufferedReader br = new BufferedReader(new FileReader(path));
+            value = br.readLine();
+            br.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
             return -1;
         }
+
+        return Integer.parseInt(value);
     }
+
 }
