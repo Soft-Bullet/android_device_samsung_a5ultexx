@@ -34,6 +34,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
       debug.sf.enable_gl_backpressure=1 \
       debug.enable.sglscale=1 \
       ro.surface_flinger.use_vr_flinger=false \
+      ro.surface_flinger.protected_contents=true \
+      ro.surface_flinger.use_smart_90_for_video=true \
+      ro.surface_flinger.set_display_power_timer_ms=10000 \
+      ro.surface_flinger.set_touch_timer_ms=5000 \
+      ro.surface_flinger.set_idle_timer_ms=9000 \
       ro.opengles.version=196608 \
       debug.hwui.use_buffer_age=false
 
@@ -140,6 +145,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
       debug.composition.type=c2d \
       debug.mdpcomp.logs=0 \
       debug.sf.hw=1 \
+      debug.egl.hw=1
 
 # Time
 PRODUCT_PROPERTY_OVERRIDES += \
