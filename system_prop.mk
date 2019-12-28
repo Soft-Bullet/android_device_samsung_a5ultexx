@@ -188,6 +188,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
      persist.cne.feature=0 \
      persist.dpm.feature=0
 
+# LMKD
+PRODUCT_PROPERTY_OVERRIDES += \
+     ro.lmk.low=1001 \
+     ro.lmk.medium=0 \
+     ro.lmk.critical=800 \
+     ro.lmk.critical_upgrade=false \
+     ro.lmk.upgrade_pressure=100 \
+     ro.lmk.downgrade_pressure=100 \
+     ro.lmk.kill_heaviest_task=true \
+     ro.lmk.kill_timeout_ms=15 \
+     ro.lmk.use_minfree_levels=true \
+     ro.lmk.enhance_batch_kill=true \
+     ro.lmk.vmpressure_file_min=80640
+
 # WiDi
 PRODUCT_PROPERTY_OVERRIDES += \
      persist.debug.wfd.enable=1 \
