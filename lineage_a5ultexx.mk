@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/a5ultexx/device.mk)
+$(call inherit-product, device/samsung/a5ultexx/a5ultexx.mk)
 
 # Release name
 PRODUCT_RELEASE_NAME := Samsung Galaxy A5
