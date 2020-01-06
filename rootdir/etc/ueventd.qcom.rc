@@ -25,14 +25,6 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-subsystem adsp
-    devname uevent_devpath
-    dirname /dev/adsp
-
-subsystem msm_camera
-    devname uevent_devpath
-    dirname /dev/msm_camera
-
 # the DIAG device node is not world writable/readable.
 /dev/diag                 0660   system     diag
 
@@ -46,24 +38,22 @@ subsystem msm_camera
 /dev/smd0                 0660   system     system
 /dev/smd4                 0660   system     system
 /dev/smd_cxm_qmi          0640   radio      radio
-/dev/qmi 		          0640   radio      radio
-/dev/qmi0		          0640   radio      radio
-/dev/qmi1		          0640   radio      radio
 /dev/smd5                 0660   system     system
 /dev/smd6                 0660   system     system
 /dev/smd7                 0660   bluetooth  bluetooth
+/dev/smd11                0660   system     radio
+/dev/radio0               0640   system     system
 /dev/ccid_bridge          0660   system     system
 /dev/ipa                  0660   net_admin  net_admin
 /dev/wwan_ioctl           0660   net_admin  net_admin
 /dev/ipaNatTable          0660   net_admin  net_admin
-/dev/rmnet_ctrl           0660   usb        usb
-/dev/dpl_ctrl             0660   usb        usb
 
 #permissions for CSVT
 /dev/smd11                0660   radio      radio
-/dev/ttyHSL0			  0660	 root		radio
+
 /dev/radio0               0640   system     system
 /dev/rfcomm0              0660   bluetooth  bluetooth
+/dev/gss                  0660   gps        gps
 /dev/ttyUSB0              0660   bluetooth  bluetooth
 /dev/smdcntl0             0640   radio      radio
 /dev/smdcntl1             0640   radio      radio
@@ -74,9 +64,6 @@ subsystem msm_camera
 /dev/smdcntl6             0640   radio      radio
 /dev/smdcntl7             0640   radio      radio
 /dev/smdcntl8             0640   radio      radio
-/dev/smdcntl9             0640   radio      radio
-/dev/smdcntl10            0640   radio      radio
-/dev/smdcntl11            0640   radio      radio
 /dev/smdcnt_rev0          0640   radio      radio
 /dev/smdcnt_rev1          0640   radio      radio
 /dev/smdcnt_rev2          0640   radio      radio
@@ -101,6 +88,10 @@ subsystem msm_camera
 /dev/hsicctl1             0640   radio      radio
 /dev/hsicctl2             0640   radio      radio
 /dev/hsicctl3             0640   radio      radio
+/dev/hsusbctl0            0640   radio      radio
+/dev/hsusbctl1            0640   radio      radio
+/dev/hsusbctl2            0640   radio      radio
+/dev/hsusbctl3            0640   radio      radio
 /dev/hsicctl4             0640   radio      radio
 /dev/hsicctl5             0640   radio      radio
 /dev/hsicctl6             0640   radio      radio
@@ -131,15 +122,17 @@ subsystem msm_camera
 /dev/msm_camera/*         0660   system     camera
 /dev/gemini/              0660   system     camera
 /dev/mercury0             0660   system     camera
-/dev/msm_vidc_reg         0660   system     camera
-/dev/msm_vidc_dec         0660   system     camera
-/dev/msm_vidc_dec_sec     0660   system     camera
-/dev/msm_vidc_enc         0660   system     camera
-/dev/msm_rotator          0660   system     system
+/dev/msm_vidc_reg         0660   system     audio
+/dev/msm_vidc_dec         0660   system     audio
+/dev/msm_vidc_dec_sec     0660   system     audio
+/dev/msm_vidc_enc         0660   system     audio
+/dev/msm_vidc_enc_sec     0660   system     audio
+/dev/msm_rotator          0660   system     graphics
 /dev/adsprpc-smd          0664   system     system
+/dev/graphics/*           0660   system     graphics
+/dev/tun                  0660   system     vpn
 
 #permissions for audio
-/dev/adsp/*               0660   system     audio
 /dev/audio_slimslave      0660   system     audio
 /dev/msm_qcelp            0660   system     audio
 /dev/msm_evrc             0660   system     audio
@@ -147,6 +140,7 @@ subsystem msm_camera
 /dev/msm_wmapro           0660   system     audio
 /dev/msm_amrnb            0660   system     audio
 /dev/msm_amrwb            0660   system     audio
+/dev/msm_amrwb_in         0660   system     audio
 /dev/msm_amrwbplus        0660   system     audio
 /dev/msm_aac              0660   system     audio
 /dev/msm_multi_aac        0660   system     audio
@@ -156,6 +150,7 @@ subsystem msm_camera
 /dev/msm_amrnb_in         0640   system     audio
 /dev/msm_a2dp_in          0660   system     audio
 /dev/msm_ac3              0660   system     audio
+/dev/msm_acdb             0660   system     audio
 /dev/msm_audio_cal        0660   system     audio
 /dev/msm_cad              0660   system     audio
 /dev/msm_fm               0660   system     audio
@@ -163,10 +158,14 @@ subsystem msm_camera
 /dev/msm_pcm_lp_dec       0660   system     audio
 /dev/msm_preproc_ctl      0660   system     audio
 /dev/msm_rtac             0660   system     audio
+/dev/msm_sps              0660   system     audio
 /dev/msm_voicememo        0660   system     audio
+/dev/radio0               0640   system     fm_radio
+/dev/audience_a2220       0660   system     audio
 /dev/radio0               0640   fm_radio   fm_radio
 /dev/smd3                 0660   bluetooth  bluetooth
 /dev/smd2                 0660   bluetooth  bluetooth
+/dev/ttyHSL0              0660   radio      system
 /dev/ttyHSL1              0660   system     system
 /dev/ttyHS1               0660   system     system
 /dev/mdm                  0660   system     radio
@@ -174,14 +173,13 @@ subsystem msm_camera
 /dev/sdio_tty_ciq_00      0660   system     system
 /dev/tty_sdio_00          0660   system     system
 /dev/ttyGS0               0660   system     system
-/dev/i2c-5                0660   media       media
+/dev/i2c-5                0660   media      media
 /dev/voice_svc            0660   system     audio
-/dev/avtimer              0660   system     audio
 
 # DVB devices
-/dev/dvb/adapter0/demux*  0440   media       media
-/dev/dvb/adapter0/dvr*    0660   media       media
-/dev/dvb/adapter0/video*  0660   media       media
+/dev/dvb/adapter0/demux*  0444   media      media
+/dev/dvb/adapter0/dvr*    0664   media      media
+/dev/dvb/adapter0/video*  0664   media      media
 
 # Broadcast devices
 /dev/tsc_mux0             0660   media       media
@@ -214,12 +212,25 @@ subsystem msm_camera
 /dev/vm_bms               0660   system     system
 /dev/battery_data         0660   system     system
 
+# native sensors
+/sys/devices/i2c-12/12-*  pollrate_ms 0664 system system
+/sys/devices/i2c-12/12-*  enable  0664 system system
+/sys/devices/i2c-12/12-*  poll_delay 0664 system system
+
+# sensor sysfs properties
+/sys/devices/virtual/input/input*	poll_delay	0660	system	radio
+/sys/devices/virtual/input/input*	enable		0660	system	radio
+/sys/devices/virtual/input/input*	acc_enable	0660	system	radio
+/sys/devices/virtual/input/input*	gyro_enable	0660	system	radio
+/sys/devices/virtual/input/input*	acc_delay	0660	system	radio
+/sys/devices/virtual/input/input*	gyro_delay	0660	system	radio
+
 # wlan
 /dev/wcnss_wlan           0660   system     system
 /dev/wcnss_ctrl           0660   system     system
-#nfc permissions
+
+# nfc permissions
 /dev/nfc-nci              0660    nfc         nfc
-/dev/nq-nci               0660    nfc         nfc
 /dev/assd                 0660    nfc         nfc
 
 # UIO devices
@@ -233,26 +244,30 @@ subsystem msm_camera
 # Ultrasound device
 /dev/usf1                 0660   system     system
 
+# ESOC devices
+/dev/subsys_esoc*         0640   system     radio
+
 # Ramdump devices
 /dev/ramdump*             0640   system     system
 
-#Improve Touch
-/dev/hbtp_input           0660   system     system
-/dev/hbtp_vm              0660   system     system
-/dev/jdi-bu21150          0660   system     system
+#latin Mobile TV
+/dev/isdbt                0660   system     system
 
-#cpufreq_governor
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/above_hispeed_delay    0660  system system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/go_hispeed_load        0660  system system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/timer_rate             0660  system system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/hispeed_freq           0660  system system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/io_is_busy             0660  system system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/target_loads           0660  system system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/min_sample_time        0660  system system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/sampling_down_factor   0660  system system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/lpm_disable_freq       0660  system system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/use_migration_notif    0660  system system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/use_sched_load         0660  system system
 
-# Add device block for FRP
-/dev/block/platform/soc.0/7824900.sdhci/by-name/config    0660   system     system
+# for sensor
+/dev/mpu                  0660   system     system
+/dev/mpuirq               0660   system     system
+/dev/timerirq             0660   system     system
+/dev/alps_io              0660   system     system
+
+# sensorhub
+/dev/ssp_sensorhub        0660   system     system
+
+# for usb printer
+/dev/bus/usb/*            0660   system     usb
+/dev/usb/lp*              0660   system     usb
+
+# permission for dun
+/dev/dun                  0660   system     system
+
+

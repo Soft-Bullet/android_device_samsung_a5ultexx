@@ -1,0 +1,26 @@
+[
+  {
+    "remote": "github",
+    "repository": "Soft-Bullet/android_kernel_samsung_msm8916",
+    "target_path": "kernel/samsung/msm8916",
+    "revision": "lineage-17.0"
+  },
+  {
+    "remote": "github",
+    "repository": "LineageOS/android_device_samsung_qcom-common",
+    "target_path": "device/samsung/qcom-common",
+    "revision": "lineage-17.0"
+  },
+  {
+    "remote": "github",
+    "repository": "LineageOS/android_external_sony_boringssl-compat",
+    "target_path": "external/sony/boringssl-compat",
+    "revision": "lineage-17.0"
+  },
+  {
+    "remote": "github",
+    "repository": "LineageOS/android_hardware_samsung",
+    "target_path": "hardware/samsung",
+    "revision": "lineage-17.0"
+  }
+]
