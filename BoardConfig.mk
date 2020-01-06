@@ -55,8 +55,10 @@ TARGET_USES_64_BIT_BINDER := true
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
-QCOM_BT_USE_BTNV := true
 BLUETOOTH_HCI_USE_MCT := true
+
+# Bootanimation
+TARGET_BOOTANIMATION_HALF_RES := true
 
 # Bootloader
 TARGET_NO_BOOTLOADER := true
@@ -72,10 +74,6 @@ TARGET_USES_QTI_CAMERA_DEVICE := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_SHOW_PERCENTAGE := true
-BOARD_CHARGER_DISABLE_INIT_BLANK := true
-
-# Compile libhwui in performance mode
-HWUI_COMPILE_FOR_PERF := true
 
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
@@ -91,8 +89,7 @@ TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
 
 # Encryption
-TARGET_HW_DISK_ENCRYPTION := true
-TARGET_KEYMASTER_WAIT_FOR_QSEE := true
+TARGET_KEYMASTER_SKIP_WAITING_FOR_QSEE := true
 
 # FM
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
@@ -109,6 +106,7 @@ TARGET_NO_RPC := true
 TARGET_INIT_VENDOR_LIB := libinit_a5
 
 # Kernel
+TARGET_KERNEL_ARCH := arm
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 BOARD_DTBTOOL_ARGS := -2
@@ -131,9 +129,6 @@ KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
-
-# Malloc implementation
-MALLOC_SVELTE := true
 
 # Media
 TARGET_QCOM_MEDIA_VARIANT := caf
@@ -158,8 +153,8 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Legacy BLOB Support
 TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
-    /system/bin/mediaserver=23 \
-    /system/bin/mm-qcamera-daemon=23 \
+    /system/bin/mediaserver=22 \
+    /system/bin/mm-qcamera-daemon=22 \
     /system/vendor/bin/hw/rild=27
 
 # Power
@@ -167,6 +162,8 @@ TARGET_POWERHAL_SET_INTERACTIVE_EXT := $(DEVICE_PATH)/power/power_ext.c
 
 # Qcom
 BOARD_USES_QCOM_HARDWARE := true
+BOARD_USES_QC_TIME_SERVICES := true
+PROTOBUF_SUPPORTED := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
@@ -188,11 +185,10 @@ VENDOR_SECURITY_PATCH := 2017-08-01
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
-    /system/lib/libmmjpeg_interface.so|libboringssl-compat.so \
+    /system/lib/libcrypto.so|libboringssl-compat.so \
     /system/lib/libsec-ril.so|libsec-ril_shim.so \
     /system/lib/libsec-ril-dsds.so|libsec-ril_shim.so \
-    /system/vendor/lib/libizat_core.so|libizat_core_shim.so \
-    /system/vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so
+    /system/vendor/lib/libizat_core.so|libizat_core_shim.so
 
 # Touchscreen
 TARGET_TAP_TO_WAKE_NODE := "/sys/class/sec/sec_touchscreen/wake_gesture"
@@ -217,4 +213,3 @@ WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 WIFI_HIDL_FEATURE_DISABLE_AP_MAC_RANDOMIZATION := true
-
