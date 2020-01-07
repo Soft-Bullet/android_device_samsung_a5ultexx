@@ -20,9 +20,6 @@
      for different hardware and product builds. -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-<!-- Config Bluetooth to Disable by default-->
-    <bool name="def_bluetooth_on">false</bool>
-
 <!-- The RadioAccessFamilies supported by the device.
          Empty is viewed as "all".  Only used on devices which
          don't support RIL_REQUEST_GET_RADIO_CAPABILITY
@@ -254,24 +251,6 @@
         <item>20</item>
     </integer-array>
 
-    <!-- Vibrator pattern for feedback about booting with safe mode disabled -->
-    <integer-array name="config_safeModeDisabledVibePattern">
-        <item>0</item>
-        <item>1</item>
-        <item>20</item>
-        <item>21</item>
-    </integer-array>
-
-    <!-- Vibrator pattern for feedback about booting with safe mode disabled -->
-    <integer-array name="config_safeModeEnabledVibePattern">
-        <item>0</item>
-        <item>1</item>
-        <item>20</item>
-        <item>21</item>
-        <item>500</item>
-        <item>600</item>
-    </integer-array>
-
     <!-- Vibrator pattern for feedback about hitting a scroll barrier -->
     <integer-array name="config_scrollBarrierVibePattern">
         <item>0</item>
@@ -299,9 +278,21 @@
    <!-- Boolean to enable stk functionality on Samsung phones -->
     <bool name="config_samsung_stk">true</bool>
 
+   <!-- Flag indicating if device supports EAP SIM, AKA, AKA' -->
+    <bool name="config_eap_sim_based_auth_supported">false</bool>
+
    <!-- Older rotation sensors are not setting event.timestamp correctly. Setting to
          true will use SystemClock.elapsedRealtimeNanos() to set timestamp. -->
     <bool name="config_useSystemClockforRotationSensor">true</bool>
+
+   <!-- Minimum allowable screen brightness to use in a very dark room.
+         This value sets the floor for the darkest possible auto-brightness
+         adjustment.  It is expected to be somewhat less than the first entry in
+         config_autoBrightnessLcdBacklightValues so as to allow the user to have
+         some range of adjustment to dim the screen further than usual in very
+         dark rooms. The contents of the screen must still be clearly visible
+         in darkness (although they may not be visible in a bright room). -->
+    <integer name="config_screenBrightnessDark">5</integer>
 
     <!-- Button Backlight -->
     <bool name="config_button_brightness_support">true</bool> 
@@ -437,6 +428,9 @@
          flag is set for wifi displays.
     -->
     <bool name="config_wifiDisplaySupportsProtectedBuffers">true</bool>
+
+   <!-- Disable dreams. Interferes with ambient display. -->
+    <bool name="config_dreamsSupported">false</bool>
 
     <!-- Package name(s) containing location provider support.
          These packages can contain services implementing location providers,
