@@ -50,18 +50,18 @@
     <ctl name="TTY Mode" value="OFF" />
     <!--<ctl name="HPHL Volume" value="9" />
     <ctl name="HPHR Volume" value="9" />-->
-    <ctl name="RX1 Digital Volume" value="85" />
-    <ctl name="RX2 Digital Volume" value="85" />
-    <ctl name="RX3 Digital Volume" value="85" />
-    <ctl name="IIR1 INP1 Volume" value="87" />
-    <ctl name="IIR1 INP2 Volume" value="87" />
-    <ctl name="IIR1 INP3 Volume" value="87" />
-    <ctl name="IIR1 INP4 Volume" value="87" />
+    <ctl name="RX1 Digital Volume" value="84" />
+    <ctl name="RX2 Digital Volume" value="84" />
+    <ctl name="RX3 Digital Volume" value="84" />
+    <ctl name="IIR1 INP1 Volume" value="84" />
+    <ctl name="IIR1 INP2 Volume" value="84" />
+    <ctl name="IIR1 INP3 Volume" value="84" />
+    <ctl name="IIR1 INP4 Volume" value="84" />
     <ctl name="ADC1 Volume" value="6" />
     <ctl name="ADC2 Volume" value="6" />
     <ctl name="ADC3 Volume" value="6" />
-    <ctl name="DEC1 Volume" value="87" />
-    <ctl name="DEC2 Volume" value="87" />
+    <ctl name="DEC1 Volume" value="84" />
+    <ctl name="DEC2 Volume" value="84" />
     <ctl name="DEC2 MUX" value="ZERO" />
     <ctl name="DEC1 MUX" value="ZERO" />
     <ctl name="ADC2 MUX" value="ZERO" />
@@ -85,11 +85,7 @@
     <ctl name="EAR PA Boost" value="ENABLE" />
     <ctl name="MI2S_RX Channels" value="One" />
     <ctl name="MI2S_TX Channels" value="One" />
-<!--
-      Remove this control because our amplifier HAL controls it
-      externally to what is done with mixer-paths
-    <ctl name="Initial external PA" value="disable" />
-  -->
+
     <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia1" value="0" />
     <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia4" value="0" />
     <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia5" value="0" />
@@ -540,7 +536,7 @@
     <path name="handset">
         <ctl name="RX1 MIX1 INP1" value="RX1" />
         <ctl name="RDAC2 MUX" value="RX1" />
-        <ctl name="RX1 Digital Volume" value="90" />
+        <ctl name="RX1 Digital Volume" value="84" />
         <ctl name="EAR PA Gain" value="POS_6_DB" />
         <ctl name="EAR_S" value="Switch" />
     </path>
@@ -548,7 +544,6 @@
     <path name="handset-mic">
         <path name="adc1" />
         <ctl name="IIR1 INP1 MUX" value="DEC1" />
-        <ctl name="DEC1 Volume" value="98" />
     </path>
 
     <path name="headphones">
@@ -630,12 +625,10 @@
 
     <path name="voice-rec-mic">
         <path name="handset-mic" />
-        <ctl name="ADC1 Volume" value="8" />
-        <ctl name="DEC1 Volume" value="104" />
     </path>
 
     <path name="camcorder-mic">
-        <path name="voice-rec-mic" />
+        <path name="handset-mic" />
     </path>
 
     <path name="bt-sco-headset">
