@@ -39,6 +39,9 @@ BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := a5ulte,a5ultexx,a5lte,a53gxx,a53g,a5ltexx,a5ltedd,a5ultektt,a5ultelgt,a5lteub,a5ultekx,a5ulteskt,a5ultebmc,a5ultedv,a5ltezt
 
+# AOSP Surfaceflinger
+TARGET_USE_AOSP_SURFACEFLINGER := true
+
 # Audio
 AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT := true
 AUDIO_FEATURE_ENABLED_AUDIOSPHERE := true
