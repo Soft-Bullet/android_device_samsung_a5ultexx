@@ -39,7 +39,7 @@ sys/bus/platform/drivers/sec-battery/battery.85/power_supply/battery(/.*)?			u:o
 # Sensors
 /efs/prox_cal											u:object_r:sensors_efs_file:s0
 
-# CMHW
+# Vibrator
 /sys/devices/virtual/timed_output/vibrator(/.*)?						u:object_r:sysfs_vibeamp:s0
 
 # time_daemon
@@ -57,5 +57,6 @@ sys/bus/platform/drivers/sec-battery/battery.85/power_supply/battery(/.*)?			u:o
 # qmuxd
 /system/bin/qmuxd										u:object_r:qmuxd_exec:s0
 
-# touch
+# HIDL
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.a5-common   u:object_r:hal_lineage_touch_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.sensors@1\.0-service\.a5-common      u:object_r:hal_sensors_default_exec:s0
