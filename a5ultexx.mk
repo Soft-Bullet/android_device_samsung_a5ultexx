@@ -98,9 +98,6 @@ PRODUCT_PACKAGES += \
     camera.msm8916 \
     Snap
 
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
-
 # Dirac
 PRODUCT_PACKAGES += \
     Dirac
