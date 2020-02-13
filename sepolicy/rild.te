@@ -9,6 +9,7 @@ allow rild unlabeled:lnk_file { read getattr };
 allow rild net_radio_prop:property_service set;
 allow rild unlabeled:dir search;
 allow rild unlabeled:file { getattr open read };
-
+allow rild system_data_file:dir { remove_name add_name write };
+allow rild system_data_file:file { read open write unlink create setattr };
 
 set_prop(rild, system_radio_prop)

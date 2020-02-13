@@ -1,3 +1,8 @@
 r_dir_file(thermal-engine, sysfs_spmi_dev)
 
+allow thermal-engine sysfs:dir { open read };
+allow thermal-engine sysfs:file { open read getattr };
+allow thermal-engine socket_device:sock_file { create setattr };
+allow thermal-engine thermal-engine:capability { dac_override };
+
 set_prop(thermal-engine, thermald_prop)

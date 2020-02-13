@@ -1,5 +1,9 @@
 allow system_server sensors_device:chr_file rw_file_perms;
 allow system_server efs_file:dir search;
 allow system_server sysfs_vibeamp:file write;
+allow system_server misc_file:dir getattr;
+allow system_server sysfs_livedisplay_tuneable:file rw_file_perms;
+allow system_server init:binder { call transfer };
+allow system_server system_server:process execmem;
 r_dir_file(system_server, persist_file)
 

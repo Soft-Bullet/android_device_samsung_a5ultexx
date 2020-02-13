@@ -22,3 +22,5 @@ allow toolbox sysfs_lowmemorykiller:file { read open };
 allow toolbox file_contexts_file:file { read getattr open };
 allow toolbox fm_prop:file { read open getattr };
 allow toolbox fm_prop:property_service set;
+allow toolbox system_data_file:dir { create setattr };
+

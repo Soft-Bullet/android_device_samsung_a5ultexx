@@ -18,3 +18,6 @@ allow hal_memtrack_default servicemanager:dir { open read search getattr };
 allow hal_memtrack_default vndservicemanager:file { open read getattr };
 allow hal_memtrack_default hwservicemanager:dir { open read search };
 allow hal_memtrack_default vndservicemanager:dir { open read search };
+allow hal_memtrack_default hal_keymaster_qti:dir { search };
+allow hal_memtrack_default hal_keymaster_qti:file { open read getattr };
+
