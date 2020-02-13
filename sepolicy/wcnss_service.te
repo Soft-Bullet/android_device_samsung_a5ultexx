@@ -7,7 +7,7 @@ allow wcnss_service exfat:dir search;
 allow wcnss_service serialno_prop:file { getattr open read };
 allow wcnss_service persist_file:dir { search write add_name };
 allow wcnss_service persist_file:file { read write open setattr };
-allow wcnss_service persist_data_file:file { open read stetattr write };
+allow wcnss_service persist_data_file:file { open read setattr write };
 allow wcnss_service persist_data_file:dir search;
 allow wcnss_service property_socket:sock_file { write };
 allow wcnss_service init:unix_stream_socket { connectto };
