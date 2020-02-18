@@ -277,6 +277,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service-qti
 
+# Privapp Whitelist
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml
+
 # Radio
 PRODUCT_PACKAGES += \
     libsecnativefeature \
