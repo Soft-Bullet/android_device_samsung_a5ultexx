@@ -26,13 +26,12 @@ vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
 
 # AptX
-vendor/lib/libaptX_encoder.so
-vendor/lib/libaptXHD_encoder.so
+vendor/lib/libaptX_encoder.so|b03772672144d4b750a5672c2922aded93bb0512
+vendor/lib/libaptXHD_encoder.so|b65cd3b72ae3e6a57901fd5b5383bfa1a88c5737
 
 # Bluetooth
-bin/btnvtool
-bin/hci_qcomm_init
-vendor/lib/libbtnv.so
+bin/hci_qcomm_init|feb560ac03f231f59dcf4c8b1ec4056f0171b85b
+-vendor/lib/libbtnv.so|9b6845a4206e1423b9d476fd6e290930ec6d0d4a
 
 # Camera
 bin/mm-qcamera-daemon
@@ -120,29 +119,16 @@ lib/libawb_algo_front_al.so
 lib/libaec_algo_rear.so
 
 # Camera firmware
-etc/firmware/cpp_firmware_v1_1_1.fw
-etc/firmware/cpp_firmware_v1_1_6.fw
-etc/firmware/cpp_firmware_v1_2_0.fw
 etc/firmware/cpp_firmware_v1_4_0.fw
 etc/B05QL_s5k5e3yx_module_info.xml
 etc/F13QS_imx135_module_info.xml
 
 # DRM
-bin/qcom-system-daemon
-lib/libdrmdecrypt.so
-lib/libhdcp2.so
-bin/qseecomd
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
-vendor/lib/libQSEEComAPI.so
 vendor/lib/librpmb.so
 vendor/lib/libssd.so
-vendor/lib/libwvdrm_L1.so
 vendor/lib/liboemcrypto.so
-vendor/lib/libwvm.so
-lib/drm/libdrmwvmplugin.so
-vendor/lib/libWVStreamControlAPI_L1.so
-vendor/lib/mediadrm/libwvdrmengine.so
 
 # NFC
 lib/hw/nfc_nci.msm8916.so
@@ -206,10 +192,6 @@ vendor/lib/libsecureui_svcsock.so
 vendor/lib/libsecureuisvc_jni.so
 
 # Media
-lib/libOmxVdecHevc.so
-vendor/lib/libHevcSwDecoder.so
-vendor/lib/libI420colorconvert.so
-vendor/lib/libmm-color-convertor.so
 vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxQcelp13Dec.so
@@ -217,7 +199,6 @@ vendor/lib/libOmxQcelp13Dec.so
 # Miscellaneous
 bin/ssr_diag
 bin/ssr_setup
-bin/wdsdaemon
 bin/subsystem_ramdump
 lib/libedmnativehelper.so
 vendor/lib/libfastcvopt.so
@@ -225,8 +206,8 @@ vendor/lib/libscve_mv.so
 vendor/lib/libscve.so
 
 # Perf
-vendor/bin/perfd
-vendor/lib/libqti-perfd-client.so
+vendor/bin/perfd|622b2e94eaad0fc245e0075318480c3d16cbd091
+vendor/lib/libqti-perfd-client.so|90b2007264bcda7fc706fd55becdea4c6b999233
 
 # Post-processing
 vendor/lib/libdisp-aba.so
@@ -252,11 +233,9 @@ bin/qseecomd
 vendor/lib/libQSEEComAPI.so
 
 # Radio
-bin/rild
 bin/netmgrd
 bin/qmuxd
 bin/radish
-bin/rfs_access
 bin/rmt_storage
 vendor/lib/libperipheral_client.so
 vendor/lib/libconfigdb.so
@@ -264,14 +243,10 @@ vendor/lib/libmdmdetect.so
 vendor/lib/libnetmgr.so
 vendor/lib/libril-qcril-hook-oem.so
 vendor/lib/libxml.so
-lib/libril.so
-lib/libreference-ril.so
 lib/libsec-ril.so
-lib/libsecril-client.so
 lib/libcordon.so
 lib/libfactoryutil.so
 lib/libomission_avoidance.so
-lib/librmnetctl.so
 etc/plmn_se13.bin
 etc/plmn_delta.bin
 
@@ -300,3 +275,6 @@ bin/ssr_setup
 bin/subsystem_ramdump
 lib/libhdcp2.so
 lib/libatparser.so
+
+# Widevine - from angler - OPR6.170623.017 factory image
+vendor/lib/mediadrm/libwvdrmengine.so|66ba66d047044f92eb0eada1faf6a5799ded90ab
