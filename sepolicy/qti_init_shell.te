@@ -3,3 +3,4 @@ allow qti_init_shell shell_exec:file { open read getattr };
 allow qti_init_shell toolbox_exec:file { getattr execute open read execute_no_trans };
 allow qti_init_shell persist_data_file:dir { open read search };
 allow qti_init_shell persist_data_file:file { read open read getattr };
+allow qti_init_shell device:dir { write };

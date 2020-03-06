@@ -40,4 +40,6 @@ allow init hidl_base_hwservice:hwservice_manager add;
 allow init hal_power_hwservice:hwservice_manager add;
 allow init hal_wifi_hwservice:hwservice_manager add;
 allow init mpctl_socket:sock_file { write };
+allow init hal_drm_hwservice:hwservice_manager { add };
+allow init alarm_device:chr_file { read open };
 
