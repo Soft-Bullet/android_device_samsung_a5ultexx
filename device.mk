@@ -194,7 +194,7 @@ PRODUCT_PACKAGES += \
 # NFC
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/nfc/nfcee_access.xml:$(TARGET_COPY_OUT_VENDOR)/etc/nfcee_access.xml \
-    $(DEVICE_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
+    $(DEVICE_PATH)/configs/nfc/libnfc-sec.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
     $(DEVICE_PATH)/configs/nfc/libnfc-sec-hal.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-sec-hal.conf
 
 PRODUCT_PACKAGES += \
@@ -381,10 +381,6 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
     android.hardware.light@2.0-service
 
-# Live Display
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.samsung-qcom
-
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0-impl \
@@ -407,14 +403,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service
-
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.a5-common
-
-# Trust
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
 
 # USB HAL
 PRODUCT_PACKAGES += \

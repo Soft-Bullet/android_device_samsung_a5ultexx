@@ -28,12 +28,12 @@ TARGET_SCREEN_WIDTH := 720
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_BOOT_ANIMATION_RES := 720
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common aosipOS stuff.
+$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := a5ultexx
-PRODUCT_NAME := lineage_a5ultexx
+PRODUCT_NAME := aosip_a5ultexx
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-A500FU
 PRODUCT_MANUFACTURER := samsung

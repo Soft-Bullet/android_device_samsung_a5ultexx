@@ -25,8 +25,6 @@ sys/bus/platform/drivers/sec-battery/battery.85/power_supply/battery(/.*)?			u:o
 /system/vendor/bin/rmt_storage										u:object_r:rmt_storage_exec:s0
 /system/vendor/bin/mm-qcamera-daemon									u:object_r:mm-qcamerad_exec:s0
 /system/vendor/bin/qmuxd										u:object_r:qmuxd_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.a5-common   u:object_r:hal_lineage_touch_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.samsung-qcom		u:object_r:hal_lineage_livedisplay_sysfs_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.sensors@1\.0-service.a5-common        u:object_r:hal_sensors_default_exec:s0
 
 # Graphics
@@ -47,7 +45,6 @@ sys/bus/platform/drivers/sec-battery/battery.85/power_supply/battery(/.*)?			u:o
 # sysfs
 /sys/devices/virtual/sensors(/.*)?                      u:object_r:sysfs_sensors:s0
 /sys/devices/virtual/input(/.*)?                        u:object_r:sysfs_input:s0
-/sys/devices/virtual/camera(/.*)?                       u:object_r:sysfs_camera:s0
 
 # sysfs - cpu/perf
 /sys/devices/system/soc/soc0(/.*)?                      u:object_r:sysfs_socinfo:s0
