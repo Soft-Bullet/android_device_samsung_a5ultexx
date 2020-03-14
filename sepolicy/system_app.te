@@ -7,4 +7,6 @@ allow system_app vendor_default_prop:property_service set;
 allow system_app sysfs_zram:dir search;
 allow system_app proc_pagetypeinfo:file { read open getattr };
 allow system_app sysfs_zram:file { read open getattr };
+allow system_app sysfs_mdnie:dir search;
+allow system_app sysfs_mdnie:file { write open getattr };
 
