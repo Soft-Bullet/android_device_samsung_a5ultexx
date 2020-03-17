@@ -395,5 +395,9 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/wifi/WCNSS_cfg.dat:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_cfg.dat \
     $(DEVICE_PATH)/configs/wifi/WCNSS_qcom_wlan_nv.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
+# XiaomiParts
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
 # Inherit from vendor
 $(call inherit-product-if-exists, vendor/samsung/a5ultexx/a5ultexx-vendor.mk)
