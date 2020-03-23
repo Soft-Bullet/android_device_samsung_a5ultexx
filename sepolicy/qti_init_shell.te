@@ -5,3 +5,7 @@ allow qti_init_shell persist_data_file:dir { open read search };
 allow qti_init_shell persist_data_file:file { read open read getattr };
 allow qti_init_shell device:dir { write add_name create open };
 allow qti_init_shell file_contexts_file:file { read open getattr };
+allow qti_init_shell unlabeled:dir { search };
+allow qti_init_shell sysfs_net:file { write };
+allow qti_init_shell device:file { create write open };
+allow qti_init_shell sysfs_android_usb:file { write };

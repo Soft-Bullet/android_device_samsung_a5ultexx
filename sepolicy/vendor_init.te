@@ -10,11 +10,12 @@ allow vendor_init {
 allow vendor_init system_data_file:file { getattr setattr open read write };
 allow vendor_init system_data_file:lnk_file { unlink create getattr  relabelfrom relabelto };
 allow vendor_init radio_data_file:file { setattr write open };
-allow vendor_init radio_data_file:lnk_file { unlink };
+allow vendor_init radio_data_file:lnk_file { unlink create getattr };
 allow vendor_init exfat:dir search;
 allow vendor_init proc:file write;
-allow vendor_init unlabeled:dir setattr;
+allow vendor_init unlabeled:dir { search setattr };
 allow vendor_init selinuxfs:file write;
+allow vendor_init unlabeled:dir { search };
 allow vendor_init unlabeled:file setattr;
 allow vendor_init kernel:security { check_context };
 allow vendor_init misc_file:lnk_file { read };

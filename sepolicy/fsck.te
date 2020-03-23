@@ -6,3 +6,4 @@ allow fsck fsck:capability { dac_override };
 allow fsck modem_efs_partition_device:blk_file { read open write ioctl };
 allow fsck persist_block_device:blk_file { read open write ioctl };
 allow fsck persist_file:dir { getattr };
+allow fsck unlabeled:dir { getattr };

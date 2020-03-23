@@ -41,4 +41,6 @@ allow init hal_power_hwservice:hwservice_manager add;
 allow init hal_wifi_hwservice:hwservice_manager add;
 allow init mpctl_socket:sock_file { write };
 allow init hal_drm_hwservice:hwservice_manager { add };
-
+allow init sysfs_livedisplay_tuneable:file { read };
+allow init sysfs_mdnie:file { read write };
+allow init sysfs_graphics:file { read write };
