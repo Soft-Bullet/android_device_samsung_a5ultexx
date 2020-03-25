@@ -27,6 +27,9 @@ sys/bus/platform/drivers/sec-battery/battery.85/power_supply/battery(/.*)?			u:o
 /dev/sec-nfc											u:object_r:nfc_device:s0
 /dev/i2c-1											u:object_r:audio_device:s0
 
+# DRM
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.widevine                u:object_r:hal_drm_widevine_exec:s0
+
 # EFS files
 /efs/bluetooth(/.*)?										u:object_r:bluetooth_efs_file:s0
 /efs/wifi(/.*)?											u:object_r:wifi_efs_file:s0
