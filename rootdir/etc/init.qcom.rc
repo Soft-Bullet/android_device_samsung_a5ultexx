@@ -623,7 +623,7 @@ service wcnss-service /system/vendor/bin/wcnss_service
     group system wifi radio
     oneshot
 
-service fm_dl /vendor/bin/init.qcom.fm.sh
+service vendor.fm /vendor/bin/init.qcom.fm.sh
     class late_start
     user system
     group system
