@@ -48,7 +48,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
       ro.surface_flinger.set_touch_timer_ms=5000 \
       ro.surface_flinger.set_idle_timer_ms=9000 \
       ro.opengles.version=196608 \
-      debug.hwui.use_buffer_age=false
+      debug.hwui.use_buffer_age=false \
+      debug.sf.latch_unsignaled=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
