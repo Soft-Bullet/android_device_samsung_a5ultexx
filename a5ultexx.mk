@@ -249,6 +249,10 @@ PRODUCT_PACKAGES += \
       Tag \
       com.android.nfc_extras
 
+# OnePlus Recorder
+PRODUCT_PACKAGES += \
+    OPScreenRecorder
+
 # Permissions
 PRODUCT_COPY_FILES += \
     external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml \
