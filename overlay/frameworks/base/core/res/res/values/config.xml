@@ -527,4 +527,8 @@
          Off by default, since the framebuffer readback used to implement the
          fading edges is prohibitively expensive on most GPUs. -->
     <bool name="config_ui_enableFadingMarquee">true</bool>
+
+    <!-- Whether to use in-built Screen Record service -->
+    <bool name="config_showScreenRecord">false</bool>
+    
 </resources>
