@@ -1,0 +1,5 @@
+cc_library_static {
+    name: "camera_parameters_samsung_a5ultexx",
+    include_dirs: ["device/samsung/a5ultexx/include"],
+    srcs: ["CameraParameters.cpp"],
+}
