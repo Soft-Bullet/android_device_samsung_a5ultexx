@@ -14,3 +14,4 @@ type sysfs_sec_key, fs_type, sysfs_type;
 type sysfs_mdnie, fs_type, sysfs_type;
 type firmware-modem_file, file_type;
 type misc_file, file_type;
+type alarm_device, file_type;

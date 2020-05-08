@@ -26,6 +26,7 @@ sys/bus/platform/drivers/sec-battery/battery.85/power_supply/battery(/.*)?			u:o
 # Device nodes
 /dev/sec-nfc											u:object_r:nfc_device:s0
 /dev/i2c-1											u:object_r:audio_device:s0
+/dev/alarm											u:object_r:alarm_device:s0
 
 # DRM
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.widevine                u:object_r:hal_drm_widevine_exec:s0

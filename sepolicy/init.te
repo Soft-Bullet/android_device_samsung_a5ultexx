@@ -21,8 +21,8 @@ allow init sysfs_thermal:file write;
 allow init sysfs_socinfo:file write;
 allow init system_data_file:chr_file getattr;
 allow init sysfs_net:file write;
-allow init fm_radio_device:chr_file ioctl;
-allow init sysfs_fm:file write;
+allow init fm_qsoc_patches_exec:file execute_no_trans;
+allow init fm_radio_device:chr_file { ioctl open read };
 allow init sysfs_msm_perf:file { open write read };
 allow init ion_device:chr_file { open read ioctl };
 allow init tee_device:chr_file { read write ioctl };
@@ -45,4 +45,4 @@ allow init sysfs_livedisplay_tuneable:file { read };
 allow init sysfs_mdnie:file { open read write };
 allow init sysfs_graphics:file { open read write };
 allow init hal_lineage_livedisplay_hwservice:hwservice_manager add;
-
+allow init sysfs_fm:file { open write };

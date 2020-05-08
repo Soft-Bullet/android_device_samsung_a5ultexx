@@ -9,4 +9,9 @@ allow system_app proc_pagetypeinfo:file { read open getattr };
 allow system_app sysfs_zram:file { read open getattr };
 allow system_app sysfs_mdnie:dir search;
 allow system_app sysfs_mdnie:file { write open getattr };
+allow system_app fm_prop:property_service set;
 
+binder_call(system_app, apexd)
+binder_call(system_app, installd)
+binder_call(system_app, netd)
+binder_call(system_app, vold)
